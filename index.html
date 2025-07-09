@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huishoudplaza</title>
+<meta name="description"  content = "Huishoudschema">
+<meta name = "keywords" content = "huishouden, schema">
+<meta name = "author" content = "I. Braam">
+<link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <noscript>
+    <p>Om deze website optimaal te gebruiken is het noodzakelijk om JavaScript te activeren. </p>
+  </noscript>
+
+  <header>
+    <div class="koptekst-achtergrond">
+      <img src="afbeeldingen/Schoonmaakster.jpg" alt = "Schoonmaakster">
+      <h1>Welkom op Huishoudplaza</h1>
+      <h2>Het is vandaag: <span id="huidigeDatum"></span></h2>
+    </div>
+  </header>
+
+  <nav>
+    <button id="startknop">Start</button>
+  </nav>
+
+  <main>
+    <div id="todo-knipper" class="verborgen">To-do</div>
+
+    <table id="schema">
+      <thead>
+        <tr class="tabelkop">
+          <th>Dag</th>
+          <th>Taken</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>Maandag</strong></td>
+        <td>Vloer van de overloop</td>
+        <td class="statuscel"></td>
+      </tr>
+      <tr>
+        <td><strong>Dinsdag</strong></td>
+        <td>Vloer van de gang</td>
+        <td class="statuscel"></td>
+      </tr>
+      <tr>
+        <td><strong>Woensdag</strong></td>
+        <td>Portaalvloer</td>
+        <td class="statuscel"></td>
+      </tr>
+      <tr>
+        <td><strong>Donderdag</strong></td>
+        <td>Trap</td>
+        <td class="statuscel"></td>
+      </tr>
+      <tr>
+        <td><strong>Vrijdag</strong></td>
+        <td>Woonkamervloer</td>
+        <td class="statuscel"></td>
+      </tr>
+      <tr>
+        <td><strong>Zaterdag</strong></td>
+        <td>Keukenvloer</td>
+        <td class="statuscel"></td>
+      </tr>
+      <tr>
+        <td><strong>Zondag</strong></td>
+        <td>Toilettevloer</td>
+        <td class="statuscel"></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div id="bedankt" class="verborgen">Bedankt en tot morgen!</div>
+  </main>
+
+</body>
+</html>
