@@ -37,6 +37,19 @@ $(document).ready(function () {
       }
     });
 
+$("#resetknop").click(function () {
+  location.reload();
+});
+
+// Zet de radio permanent aan en vergrendel hem
+$(this).prop("checked", true).prop("disabled", true);
+
+// De startknop uitschakelen
+$("#startknop").prop("disabled", true).css({
+  opacity: 0.5,
+  cursor: "not-allowed"
+});
+
     $("#todo-knipper").fadeIn().addClass("knipper");
   });
 
