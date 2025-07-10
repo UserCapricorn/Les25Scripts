@@ -17,7 +17,7 @@ function toonDatum() {
 
 // Bij laden van de pagina
 $(document).ready(function () {
-  const huidigeDag = toonDatum(); // Haal dagnaam op via functie
+  var huidigeDag = toonDatum(); // Haal dagnaam op via functie
 
   $("#startknop").click(function () {
     $("#schema tbody tr").each(function () {
@@ -61,7 +61,6 @@ $("#startknop").prop("disabled", true).css({
 
     $("#todo-knipper").fadeOut();
 
-    if ($("#bedankje").length === 0) {
       $("<div id='bedankje'>Bedankt en tot morgen!</div>")
         .css({
           color: "red",
@@ -71,6 +70,6 @@ $("#startknop").prop("disabled", true).css({
           margin: "20px"
         })
         .appendTo("main");
-    }
+
   });
 });
