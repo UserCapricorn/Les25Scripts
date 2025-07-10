@@ -12,7 +12,7 @@ function toonDatum() {
   const datumTekst = `${huidigeDagInDeWeek}, ${dag}-${maand}-${jaar}`;
   document.getElementById("huidigeDatum").textContent = datumTekst;
 
-  return huidigeDagInDeWeek; // Belangrijk: geef de naam van de dag terug
+  return huidigeDagInDeWeek; 
 }
 
 // Bij laden van de pagina
