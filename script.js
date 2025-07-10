@@ -1,15 +1,15 @@
 // Functie om de datum en dag te tonen
 function toonDatum() {
   const dagen = ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"];
-  const vandaag = new Date();
-  const dagIndex = vandaag.getDay(); // 0 = zondag, 1 = maandag, ..., 6 = zaterdag
-  const huidigeDagInDeWeek = dagen[dagIndex];
+  var vandaag = new Date();
+  var dagIndex = vandaag.getDay(); // 0 = zondag, 1 = maandag, ..., 6 = zaterdag
+  var huidigeDagInDeWeek = dagen[dagIndex];
 
-  const dag = vandaag.getDate();
-  const maand = vandaag.toLocaleString("nl-NL", { month: "long" });
-  const jaar = vandaag.getFullYear();
+  var dag = vandaag.getDate();
+  var maand = vandaag.toLocaleString("nl-NL", { month: "long" });
+  var jaar = vandaag.getFullYear();
 
-  const datumTekst = `${huidigeDagInDeWeek}, ${dag}-${maand}-${jaar}`;
+  var datumTekst = `${huidigeDagInDeWeek}, ${dag}-${maand}-${jaar}`;
   document.getElementById("huidigeDatum").textContent = datumTekst;
 
   return huidigeDagInDeWeek; 
