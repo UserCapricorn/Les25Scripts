@@ -3,87 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Huishoudplaza</title>
-<meta name="description"  content = "Huishoudschema">
-<meta name = "keywords" content = "huishouden, schema">
+<title>Welkom</title>
+<meta name="description"  content = "Mijn Hobby">
+<meta name = "keywords" content = "hobby, planeten">
 <meta name = "author" content = "I. Braam">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="styles/mainstyle.css">
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-  <script src="script.js" ></script>
+<style>
+    .navbar {
+        background-color: lightblue;
+    }
+</style>
 </head>
 <body>
-  <noscript>
-    <p>Om deze website optimaal te gebruiken is het noodzakelijk om JavaScript te activeren. </p>
-  </noscript>
+    <div class="container-md">
+        <!-- niet 100% breed bij > 576 pixels. Dus bij <= 576 pixels 100% breed -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">Welkom op mijn site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="overmij.html">Over mijn hobby</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <h1> Welkom !</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col-md-4 mb-4">
+                    <!-- Elke kolom neemt maximaal 4 gridkolommen in op medium schermen en groter -->
+                    <!-- Hierdoor maximaal 3 afbeeldingen naast elkaar in een rij.-->
+                    <!-- Als er meer dan 3 afbeeldingen naast elkaar in een rij zijn, dan start nieuwe rij -->
+                    <img src="afbeeldingen/zon_maan_aarde_2.jpg" class="img-fluid" 
+                    alt="afbeelding 1 zon maand aarde"
+                    >
+                    <p class=" text-center mt-2">zon maand aarde</p>
+                </div> 
+                <div class="col-md-4 mb-4">
+                    <img src="afbeeldingen/mercurius.jpg" class="img-fluid"
+                    alt="afbeelding 2 mercurius">
+                    <p class=" text-center mt-2">mercurius</p>
+                </div> 
+                <div class="col-md-4 mb-4">
+                    <img src="afbeeldingen/venus_2.jpg" class="img-fluid"
+                    alt="afbeelding 3 venus">
+                </div> 
+                <div class="col-md-4 mb-4">
+                    <img src="afbeeldingen/mars.jpg" class="img-fluid"
+                    alt="afbeelding 4 mars">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="afbeeldingen/jupiter_2.jpg" class="img-fluid"
+                    alt="afbeelding 5 jupiter">
+                </div>                
+                <div class="col-md-4 mb-4">
+                    <img src="afbeeldingen/saturnus_2.jpg" class="img-fluid"
+                    alt="afbeelding 6 saturnus">
+                </div>                
+                <div class="col-md-4 mb-4">
+                    <img src="afbeeldingen/uranus.jpg" class="img-fluid"
+                    alt="afbeelding 7 uranus">
+                </div>                
+                <div class="col-md-4 mb-4">
+                    <img src="afbeeldingen/neptunus_2.jpg" class="img-fluid"
+                    alt="afbeelding 8 neptunus">
+                </div>                
+                <div class="col-md-4 mb-4">
+                    <img src="afbeeldingen/pluto_2.jpg" class="img-fluid"
+                    alt="afbeelding 9 pluto">
+                </div>                
 
-  <header>
-    <div class="koptekst-achtergrond">
-      <img src="afbeeldingen/Schoonmaakster.jpg" alt = "Schoonmaakster">
-      <h1>Welkom op Huishoudplaza</h1>
-      <h2>Het is vandaag: <span id="huidigeDatum"></span></h2>
+            </div>
+       <footer style=" background-color: lightcyan">
+            <p>&copy; 2024 I. Braam. Alle rechten voorbehouden.</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity=
+"sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
     </div>
-  </header>
-
-  <nav>
-    <button id="startknop">Start</button>
-    <div style="float: right;">
-    <button id="resetknop">Resetten</button>
-    </div>
-  </nav>
-
-  <main>
-    <div id="todo-knipper" class="verborgen">To-do</div>
-
-    <table id="schema">
-      <thead>
-        <tr class="tabelkop">
-          <th>Dag</th>
-          <th>Taken</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><strong>Maandag</strong></td>
-        <td>Vloer van de overloop</td>
-        <td class="statuscel"></td>
-      </tr>
-      <tr>
-        <td><strong>Dinsdag</strong></td>
-        <td>Vloer van de gang</td>
-        <td class="statuscel"></td>
-      </tr>
-      <tr>
-        <td><strong>Woensdag</strong></td>
-        <td>Portaalvloer</td>
-        <td class="statuscel"></td>
-      </tr>
-      <tr>
-        <td><strong>Donderdag</strong></td>
-        <td>Trap</td>
-        <td class="statuscel"></td>
-      </tr>
-      <tr>
-        <td><strong>Vrijdag</strong></td>
-        <td>Woonkamervloer</td>
-        <td class="statuscel"></td>
-      </tr>
-      <tr>
-        <td><strong>Zaterdag</strong></td>
-        <td>Keukenvloer</td>
-        <td class="statuscel"></td>
-      </tr>
-      <tr>
-        <td><strong>Zondag</strong></td>
-        <td>Vloer toilette</td>
-        <td class="statuscel"></td>
-      </tr>
-      </tbody>
-    </table>
-
-    <div id="bedankt" class="verborgen">Bedankt en tot morgen!</div>
-  
-  </main>
-
 </body>
 </html>
